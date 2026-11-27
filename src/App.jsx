@@ -521,7 +521,9 @@ export default function App() {
       `${t.whatsapp.time}: ${time}`,
       "",
       `${t.whatsapp.services}:`,
-      ...selectedServices.map((service, index) => `${index + 1}. ${t.services.names[service.id]}`),
+      ...selectedServices.map(
+        (service, index) => `${index + 1}. ${t.services.names[service.id]} — ${formatPrice(service.price, language)}`,
+      ),
       "",
       t.whatsapp.thanks,
     ];
